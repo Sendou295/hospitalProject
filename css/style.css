@@ -1,0 +1,384 @@
+@charset "utf-8";
+
+/* 1. Fonts */
+@import url("http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+@import url("@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');");
+
+* {
+
+    padding: 0;
+    margin: 0;
+}
+
+
+.row {
+    box-sizing: border-box;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar (Left) */
+.nav-bar {
+    width: 50%;
+    float: left;
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+#nav-menu {
+    font-family: Crimson Text;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    letter-spacing: 1.4px;
+    line-height: 1.25em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Logo */
+.nav-logo {
+    padding: 0px 10px 0 10px;
+    text-align: center;
+}
+
+.nav-logo img {
+    width: 80%;
+}
+
+/* Style the navigation menu inside the left column */
+#nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#nav-menu li a {
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: black;
+    display: block
+}
+
+#nav-menu li a:hover {
+    background-color: #2D3791;
+    color: aliceblue;
+}
+
+
+
+/* Nav Connect link */
+.nav-connect-link {
+    text-align: center;
+
+}
+
+.nav-connect-link a i {
+    padding: 5px;
+}
+
+/* Nav Languages */
+.nav-languages {
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nav-languages a {
+    padding: 5px;
+}
+
+.nav-languages a:hover {
+    font-weight: bold;
+}
+
+/* Nav Footer */
+.nav-footer {
+    padding-top: 10px;
+}
+
+.nav-footer a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.nav-hanoi {
+    padding-left: 20px;
+    float: left;
+    text-align: center;
+}
+
+.nav-hochiminh {
+    float: right;
+    text-align: center;
+}
+
+/* Page Content (Right) */
+.page-content {
+    float: right;
+    padding: 5px 15px 15px 15px;
+}
+
+/* Header Content */
+.header-account {
+    top: 5%;
+    padding-top: 10px;
+}
+
+.header-register {
+    float: right;
+}
+
+.header-login {
+    float: right;
+}
+
+.header-account a {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.header-account img {
+    width: 13px;
+    height: 13px;
+    padding-right: 5px;
+}
+
+/* Search Content */
+.search-form {
+    position: relative;
+    top: 2%;
+    left: 50%;
+    width: 350px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-form.focus {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+.search-input {
+    position: absolute;
+    top: 10px;
+    left: 38px;
+    font-size: 14px;
+    background: none;
+    color: #5a6674;
+    width: 195px;
+    height: 20px;
+    border: none;
+    appearance: none;
+    outline: none;
+}
+
+.search-input::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+.search-button {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    outline: none !important;
+    cursor: pointer;
+}
+
+.search-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #5a6674;
+}
+
+.search-option {
+    position: absolute;
+    text-align: right;
+    top: 10px;
+    right: 15px;
+}
+
+.search-option div {
+    position: relative;
+    display: inline-block;
+    margin: 0 1px;
+    cursor: pointer;
+}
+
+.search-option div input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.01;
+    cursor: pointer;
+}
+
+.search-option div span {
+    position: absolute;
+    display: block;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    background: #929aa3;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 4px 7px;
+    border-radius: 12px;
+    top: -18px;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-option div span::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 4px solid #929aa3;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-option div:hover span {
+    opacity: 1;
+    top: -21px;
+}
+
+.search-option div label {
+    display: block;
+    cursor: pointer;
+}
+
+.search-option div svg {
+    height: 20px;
+    width: 20px;
+    fill: #5a6674;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+.search-option div:hover svg {
+    opacity: 1;
+}
+
+.search-option div input:checked+label svg {
+    fill: #e24040;
+    opacity: 0.9;
+}
+
+.search-option div input:checked+label span {
+    background: #e24040;
+}
+
+.search-option div input:checked+label span::after {
+    border-top-color: #e24040;
+}
+
+/* Banner Content */
+.banner img {
+    padding-top: 40px;
+    width: 100%;
+    background-size: cover;
+}
+
+
+/* All Content */
+h3{
+    color: #2D3791;
+}
+h4{
+    color: #fff;
+}
+
+.title-bar {
+    height: 3px;
+    width: 10%;
+    border-radius: 10px;
+    background-color: #2D3791;
+    margin: 5px 0 20px 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+/* Greenwich Hospital */
+.greenwich-hospital {
+    width: 100%;
+    padding-top: 20px;
+}
+
+
+.greenwich-hospital img{
+    width: 50%;
+    height: 50%;
+    padding: 25px 10px 10px 10px;
+}
+
+.greenwich-hospital .list-service {
+    display: flex;
+    text-align: center;
+}
+.greenwich-hospital .service1 {
+    width: 23%;
+    margin: 1%;
+    background-color: #3078EC;
+    text-align: center;
+}
+.greenwich-hospital .service2 {
+    width: 23%;
+    margin: 1%;
+    background-color: #0B52CB;
+    text-align: center;
+}
+.greenwich-hospital .service3 {
+    width: 23%;
+    margin: 1%;
+    background-color: #0342A7;
+    text-align: center;
+}
+.greenwich-hospital .service4 {
+    width: 23%;
+    margin: 1%;
+    background-color: #053480;
+    text-align: center;
+}
+.greenwich-hospital .service5 {
+    width: 23%;
+    margin: 1%;
+    background-color: #002869;
+    text-align: center;
+}
+
+
+/* Leading experts - Good doctors - Experienced specialists */
+.leading-experts-good-doctors-experienced-specialists{
+    width: 100%;
+    padding-top: 20px;
+}
+.professor-and-associate-professor{
+    width: 23%;
+    margin: 1%;
+    background-color: #002869;
+    text-align: center;
+}
